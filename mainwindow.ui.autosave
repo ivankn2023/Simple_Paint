@@ -43,6 +43,7 @@
     </property>
     <addaction name="actionSave"/>
     <addaction name="actionClear"/>
+    <addaction name="actionExit"/>
    </widget>
    <widget class="QMenu" name="menuBrush_Size">
     <property name="font">
@@ -190,6 +191,11 @@
    </property>
    <property name="text">
     <string>Blue</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
    </property>
   </action>
  </widget>

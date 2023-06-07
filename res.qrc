@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>save.png</file>
+        <file>3x.png</file>
+        <file>5x.png</file>
+        <file>7x.png</file>
+        <file>9x.jpg</file>
+        <file>clear.png</file>
+        <file>icon.jpg</file>
+        <file>black.png</file>
+        <file>blue.png</file>
+        <file>green.jpg</file>
+        <file>red.jpg</file>
+        <file>white.png</file>
+    </qresource>
+</RCC>
