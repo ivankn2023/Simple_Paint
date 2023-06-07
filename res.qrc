@@ -12,5 +12,6 @@
         <file>green.jpg</file>
         <file>red.jpg</file>
         <file>white.png</file>
+        <file>exit.png</file>
     </qresource>
 </RCC>

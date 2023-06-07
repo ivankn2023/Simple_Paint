@@ -32,6 +32,9 @@
      <pointsize>12</pointsize>
     </font>
    </property>
+   <property name="tabletTracking">
+    <bool>false</bool>
+   </property>
    <widget class="QMenu" name="menuFile">
     <property name="font">
      <font>
@@ -43,6 +46,7 @@
     </property>
     <addaction name="actionSave"/>
     <addaction name="actionClear"/>
+    <addaction name="actionExit"/>
    </widget>
    <widget class="QMenu" name="menuBrush_Size">
     <property name="font">
@@ -190,6 +194,15 @@
    </property>
    <property name="text">
     <string>Blue</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/exit.png</normaloff>:/images/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
    </property>
   </action>
  </widget>

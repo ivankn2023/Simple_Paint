@@ -3,8 +3,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
-
+#include "QMouseEvent"
+#include "QPainter"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,9 +18,19 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    virtual void mousePressEvent(QMouseEvent *event);
+    virtual void mouseMoveEvent(QMouseEvent *event);
+    virtual void mouseReleaseEvent(QMouseEvent *event);
+    virtual void paintEvent(QPaintEvent *event);
+
 
 private:
     Ui::MainWindow *ui;
+    QImage image;
+    bool drawing;
+    QPoint lastPoint;
+    QColor brushColor;
+    int brushSize;
 };
 
 #endif // MAINWINDOW_H
