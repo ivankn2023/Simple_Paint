@@ -2,7 +2,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include "QFileDialog"
-
+#include "QMessageBox"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -135,5 +135,11 @@ void MainWindow::on_actionBlue_triggered()
 void MainWindow::on_actionExit_triggered()
 {
     this->close();
+}
+
+
+void MainWindow::on_actionAbout_App_triggered()
+{
+    QMessageBox::about(this, "About app", "Version 1.1 June 2023");
 }
 

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Simple Paint</string>
   </property>
   <property name="windowIcon">
    <iconset resource="res.qrc">
@@ -77,9 +77,21 @@
     <addaction name="actionGreen"/>
     <addaction name="actionBlue"/>
    </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionAbout_App"/>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuBrush_Size"/>
    <addaction name="menuBrush_Color"/>
+   <addaction name="menuAbout"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionSave">
@@ -203,6 +215,20 @@
    </property>
    <property name="text">
     <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionAbout_App">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/question.png</normaloff>:/images/question.png</iconset>
+   </property>
+   <property name="text">
+    <string>About App</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
    </property>
   </action>
  </widget>

@@ -13,5 +13,6 @@
         <file>red.jpg</file>
         <file>white.png</file>
         <file>exit.png</file>
+        <file>question.png</file>
     </qresource>
 </RCC>
