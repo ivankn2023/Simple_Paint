@@ -24,6 +24,31 @@ public:
     virtual void paintEvent(QPaintEvent *event);
 
 
+private slots:
+    void on_actionSave_triggered();
+
+    void on_actionClear_triggered();
+
+    void on_action3_px_triggered();
+
+    void on_action5_px_triggered();
+
+    void on_action7_px_triggered();
+
+    void on_action9_px_triggered();
+
+    void on_actionBlack_triggered();
+
+    void on_actionWhite_triggered();
+
+    void on_actionRed_triggered();
+
+    void on_actionGreen_triggered();
+
+    void on_actionBlue_triggered();
+
+    void on_actionExit_triggered();
+
 private:
     Ui::MainWindow *ui;
     QImage image;

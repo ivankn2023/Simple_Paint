@@ -1,7 +1,7 @@
 
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
-
+#include "QFileDialog"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -39,8 +39,6 @@ void MainWindow::mouseMoveEvent(QMouseEvent *event)
         painter.drawLine(lastPoint, event->pos());
         lastPoint = event->pos();
         this->update();
-
-
     }
 
 }
@@ -57,7 +55,85 @@ void MainWindow::paintEvent(QPaintEvent *event)
 {
     QPainter Painter(this);
     Painter.drawImage(this->rect(), image, image.rect());
+}
+
+
+
+void MainWindow::on_actionSave_triggered()
+{
+    QString fileName = QFileDialog::getSaveFileName(this, "Save", "", "PNG(*.png);;JPEG(*.jpeg *jpg);;All files(*.*)");
+    if(fileName == ""){
+        return;
+    }
+    image.save(fileName);
+
 
 }
 
+
+void MainWindow::on_actionClear_triggered()
+{
+    image.fill(Qt::white);
+    this->update();
+}
+
+
+void MainWindow::on_action3_px_triggered()
+{
+    brushSize = 3;
+}
+
+
+void MainWindow::on_action5_px_triggered()
+{
+    brushSize = 5;
+}
+
+
+void MainWindow::on_action7_px_triggered()
+{
+    brushSize = 7;
+}
+
+
+void MainWindow::on_action9_px_triggered()
+{
+    brushSize = 9;
+}
+
+
+void MainWindow::on_actionBlack_triggered()
+{
+    brushColor = Qt::black;
+}
+
+
+void MainWindow::on_actionWhite_triggered()
+{
+    brushColor = Qt::white;
+}
+
+
+void MainWindow::on_actionRed_triggered()
+{
+    brushColor = Qt::red;
+}
+
+
+void MainWindow::on_actionGreen_triggered()
+{
+    brushColor = Qt::green;
+}
+
+
+void MainWindow::on_actionBlue_triggered()
+{
+    brushColor = Qt::blue;
+}
+
+
+void MainWindow::on_actionExit_triggered()
+{
+    this->close();
+}
 
